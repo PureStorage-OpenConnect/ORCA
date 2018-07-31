@@ -73,6 +73,5 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 
 [RedHat Ansible AWX] (https://www.ansible.com/products/awx-project)
 
----
  
 
