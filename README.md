@@ -1,4 +1,4 @@
-# Oracle Rapid Automated Cloning with Ansible
+# Oracle Rapid Clone Automation with Ansible
 
 **ORCA** is collection of Ansible playbooks which addresses the challenges of Oracle Database Copy Data Management (CDM). 
 **ORCA** provides tradtional and modern DevOPS teams a Self Service solution enabling Developers, QA and business teams the abiliy to refresh non-Production databases without impacting Production systems.
@@ -15,7 +15,7 @@ Unlike other Copy Data Management (CDM) solutions **ORCA** has zero Production I
 ## Modern DevOPS Solution
 **ORCA** is designed to be run from RedHat Ansible Tower or the Opens Source AWX Project.
 
-Suggested Automation and Orchestraction features required by CDM tools. 
+ORCA is able to leverage the Ansible Tower and AWX Automation and Orchestraction features below, if you are considering a CDM tool I strongly suggest you consider these features:
 
 1. Modern WebUI, Command Line and REST API interfaces (for integration with other DevOPS tools e.g Jenkins)
 1. The ability to schedule and run job interactivley (Self Service)
