@@ -1,6 +1,6 @@
 {
     "id": "ORCA",
-    "filter": "devops","database",
+    "filter": "database",
     "image": "http://code.purestorage.com/images/26_ORCA.png",
     "featured": 1,
     "priority": 1
