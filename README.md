@@ -17,10 +17,10 @@ Unlike other Copy Data Management (CDM) solutions **ORCA** has zero Production I
 
 Suggested Automation and Orchestraction features required by CDM tools. 
 
-1. WebUI and Command Line and REST API interfaces
+1. WebUI, Command Line and REST API interfaces
 1. The ability to schedule and run job interactivley 
 1. Provide runtime variables and parameters 
-1. Job notifications - Slack, email...
+1. Job notifications - Slack, email etc...
 1. Code configuration management through Git intergration
 1. Inventory management
 1. Security and encrypted password management
@@ -35,7 +35,7 @@ Suggested Automation and Orchestraction features required by CDM tools.
 
 ### Prerequisites
 
-ORCA requires the Pure 
+ORCA requires the PureStorage SDK
 
 ### Installation
 
