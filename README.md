@@ -35,7 +35,9 @@ ORCA is able to leverage the Ansible Tower and AWX Automation and Orchestraction
 
 ### Prerequisites
 
-ORCA requires the PureStorage SDK
+ORCA requires the PureStorage Python REST Client, details available at https://pypi.org/project/purestorage/
+
+pip install purestorage
 
 ### Installation
 
