@@ -58,8 +58,9 @@ $ ansible-playbook <playbook-name>.yaml
 
 ## Authors
 
-Ron Ekins, Oracle ACE Director
-Oracle Solutions Architect at Pure Storage
+Ron Ekins, Oracle Solutions Architect at Pure Storage
+
+Oracle ACE Director
 
 ## License
 
