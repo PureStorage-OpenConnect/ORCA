@@ -1,0 +1,12 @@
+# PURE FlashArray format
+#FA Name:
+# ip:           IP Address
+# array_token:  FA user token
+# api_version:  API Version to use
+# name:         DNS name    
+# e.g.
+FlashArray:
+  ip:          172.10.10.10
+  array_token: 5d8ad02f-547d-fc24-bb51-fa0d2b0de973
+  api_version: 1.14
+  name:        FlashArray

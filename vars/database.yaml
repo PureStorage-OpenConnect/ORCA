@@ -1,0 +1,71 @@
+---
+# Database clone variables
+# 
+src_db: oraslob
+src_init: "init{{ src_db }}.ora"
+
+tgt_db: test
+tgt_init: "init{{ tgt_db }}.ora"
+tgt_ob: /u01/app/oracle
+tgt_oh: "{{ tgt_ob }}/product/18.0.0/dbhome_1"
+tgt_dir: ~/.ansible
+# Update Oracle sys password
+sys_pwd: Manager
+
+# Set FlashArray names
+array: "{{ FlashArray }}"
+arrayT: "{{ FlashArray }}"
+source: "{{ sourceVol }}"
+target: "{{ targetVol }}"
+volmap: "{{ tgtmap }}"
+dirmap: "{{ tgtdir }}"
+
+# Set to source Protection Group name
+sourceName: z-oraclePG
+
+#Source database volumes
+sourcePG: 
+- z-oraclePG
+
+sourceVol:
+- z-oracle-u02
+- z-oracle-u03
+
+#Target database volumes
+#Update to reflect local database structure 
+targetVol:
+  u02:
+    name:   /u02 
+    src:    /dev/sdd 
+    fstype: ext4
+  u03: 
+    name:   /u03
+    src:    /dev/sde
+    fstype: ext4
+
+#Target database volume mappings
+#Update to reflect local database structure
+tgtmap:
+  vol1:
+    source:  z-oracle-u02
+    target:  "{{ inventory_hostname }}-u02"
+  vol2:
+    source:  z-oracle-u03
+    target:  "{{ inventory_hostname }}-u03"
+
+#Target directory layout
+#Update as required
+tgtdir:
+  dir1:
+    sourced: "/u02/oradata/{{ src_db | upper }}"
+    targetd: "/u02/oradata/{{ tgt_db | upper }}"
+  dir2:
+    sourced: "/u03/oraredo/{{ src_db | upper }}"
+    targetd: "/u03/oraredo/{{ tgt_db | upper }}"
+  dir3:
+    sourced: "/u03/fast_recovery_area/{{ src_db | upper }}"
+    targetd: "/u03/fast_recovery_area/{{ tgt_db | upper }}"
+  dir4:
+    sourced: "/u03/fast_recovery_area/{{ tgt_db | upper }}/{{ src_db | upper }}"
+    targetd: "/u03/fast_recovery_area/{{ tgt_db | upper }}/{{ tgt_db | upper }}"
+
