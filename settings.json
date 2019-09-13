@@ -1,5 +1,6 @@
 {
     "id": "ORCA",
+    "name": "ORCA",
     "filter": "database",
     "image": "http://code.purestorage.com/images/26_ORCA.png",
     "featured": 1,
