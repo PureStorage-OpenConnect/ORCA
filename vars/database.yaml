@@ -4,32 +4,32 @@
 src_db: oraslob
 src_init: "init{{ src_db }}.ora"
 
-tgt_db: test
+tgt_db: devslob
 tgt_init: "init{{ tgt_db }}.ora"
 tgt_ob: /u01/app/oracle
 tgt_oh: "{{ tgt_ob }}/product/18.0.0/dbhome_1"
 tgt_dir: ~/.ansible
 # Update Oracle sys password
-sys_pwd: Manager
+sys_pwd: Osmium76
 
 # Set FlashArray names
-array: "{{ FlashArray }}"
-arrayT: "{{ FlashArray }}"
+array: "{{ se_EMEA_EBC_FAm20 }}"
+arrayT: "{{ se_EMEA_EBC_FA420  }}"
 source: "{{ sourceVol }}"
 target: "{{ targetVol }}"
 volmap: "{{ tgtmap }}"
 dirmap: "{{ tgtdir }}"
 
 # Set to source Protection Group name
-sourceName: z-oraclePG
+sourceName: z-oracle1PG
 
 #Source database volumes
 sourcePG: 
-- z-oraclePG
+- z-oracle1PG
 
 sourceVol:
-- z-oracle-u02
-- z-oracle-u03
+- z-oracle1-u02
+- z-oracle1-u03
 
 #Target database volumes
 #Update to reflect local database structure 
@@ -47,10 +47,10 @@ targetVol:
 #Update to reflect local database structure
 tgtmap:
   vol1:
-    source:  z-oracle-u02
+    source:  z-oracle1-u02
     target:  "{{ inventory_hostname }}-u02"
   vol2:
-    source:  z-oracle-u03
+    source:  z-oracle1-u03
     target:  "{{ inventory_hostname }}-u03"
 
 #Target directory layout
