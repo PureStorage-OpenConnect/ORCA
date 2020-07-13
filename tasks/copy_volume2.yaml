@@ -1,0 +1,20 @@
+---
+# Local PG snapshot name example:
+#   z-oracle-u01.ansible123
+#   z-oracle1PG.ansible162.z-oracle1-u01
+# 
+# Replicated volume name example
+#   FlashArray:z-oraclePG.11551.z-oracle-u01
+# 
+#
+- name: Overwrite Database Volume(s) v2 
+  purefa_pgsnap:
+    name: "{{ sourceName }}"
+    suffix: "{{ suffix }}"
+    restore: "{{ item.value.source }}"
+    target: "{{ item.value.target }}"
+    overwrite: true
+    fa_url: "{{ array.ip }}"
+    api_token: "{{ array.array_token }}"
+    state: copy
+  with_dict: "{{ tgtmap }}"

@@ -9,7 +9,7 @@
 # 7. Rename the directories on cloned database
 # 8. Bring up the database & change filenames
 #
-- name: Oracle Database Refresh
+- name: Oracle Database Refresh v2
   hosts: tgtservers 
   vars_files:
     - vars/arrays.yaml
@@ -31,16 +31,14 @@
     - include: tasks/create_admin.yaml
       tags: setup
 
-# Create Pure session
-    - include: tasks/create_session.yaml
-      run_once: yes
-    
 #    - pause:
 #        prompt: "Look in /tmp"
 
 # Take Snapshot of database volumes
-    - include: tasks/take_snapshot.yaml
+    - include: tasks/take_snapshot2.yaml
       run_once: yes
+
+#    - meta: end_play
 
 # Stop Target Database
     - include: tasks/shutdown_DB.yaml
@@ -51,7 +49,11 @@
       tags: unmount
 
 # Copy Snapshot to target database volume
-    - include: tasks/copy_volume.yaml
+    - include: tasks/copy_volume2.yaml
+      tags: refresh
+
+# Create database volumes tags
+    - include: tasks/create_tag.yaml
       tags: refresh
 
 #    - meta: end_play
@@ -84,5 +86,5 @@
         chdir: "{{ tgt_dir }}"
 
 # Delete Snapshot of database volumes
-    - include: tasks/delete_snapshot.yaml
+    - include: tasks/delete_snapshot2.yaml
       run_once: yes

@@ -1,9 +1,9 @@
 ---
 # Local PG snapshot name example:
-#   z-oracle-u01.ansible123
+#   z-oracle1-u01.ansible123
 # 
 # Replicated volume name example
-#   FlashArray:z-oraclePG.11551.z-oracle-u01
+#   se-EMEA-EBC-FAm20-a:z-oracle1PG.11551.z-oracle1-u01
 # 
 - name: Overwrite Database volume(s)
   uri:

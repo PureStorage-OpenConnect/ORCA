@@ -1,0 +1,18 @@
+---
+# Create Database Volume Tags
+# Limit of 5 tags per Namespace
+#
+- name: Create Database tags in Oracle Namespace
+  purefa_volume_tags:
+    name: "{{ item.value.target }}"
+    namespace: Oracle
+    copyable: true
+    kvp:
+      - 'srcDBname:{{ src_db }}'
+      - 'tgtDBname:{{ tgt_db }}'
+      - 'Type:FileSystem'
+    fa_url: "{{ array.ip }}"
+    api_token: "{{ array.array_token }}"
+    state: present
+  with_dict: "{{ tgtmap }}"
+  ignore_errors: True

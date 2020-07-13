@@ -1,0 +1,10 @@
+---
+# Delete and eradicate database snapshots
+- name: Delete and Eradicate PURE Database Snapshot(s)
+  purefa_pgsnap:
+    fa_url: "{{ array.ip }}"
+    api_token: "{{ array.array_token }}"
+    name: "{{ sourceName }}"
+    suffix: "{{ suffix }}"
+    eradicate: true
+    state: absent
