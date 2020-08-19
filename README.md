@@ -51,8 +51,8 @@ Use from ansible control machine command line or via RedHat Tower / AWX.
 `
 $ ansible-playbook database_clone.yaml
 `
-### Database Clone 2 - 
-Requires Purity 6+ for Volume tagging
+### Database Clone v2
+Use Purity 6+ to tag database volumes with database name
 `
 $ ansible-playbook database_clone2.yaml
 `
