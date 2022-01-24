@@ -63,7 +63,7 @@ $ ansible-playbook database_clone2.yaml
 
 ## Authors
 
-Ron Ekins, Oracle Solutions Architect at Pure Storage
+Ron Ekins, Principal Filed Solutions Architect, Office of the CTO at Pure Storage
 
 Oracle ACE Director
 
