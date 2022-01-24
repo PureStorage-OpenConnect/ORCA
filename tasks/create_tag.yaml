@@ -8,9 +8,7 @@
     namespace: Oracle
     copyable: true
     kvp:
-      - 'srcDBname:{{ src_db }}'
-      - 'tgtDBname:{{ tgt_db }}'
-      - 'Type:FileSystem'
+      - 'dbName:{{ tgt_db }}'
     fa_url: "{{ array.ip }}"
     api_token: "{{ array.array_token }}"
     state: present

@@ -1,0 +1,19 @@
+# PURE FlashArray format
+#FA Name:
+# ip:           IP Address
+# array_token:  FA user token
+# api_version:  API Version to use
+# name:         DNS name    
+# e.g.
+#
+se_EMEA_EBC_FAm20:
+  ip:          10.225.112.80
+  array_token: 5d8ad02f-547d-fc24-bb51-fa0d2b0de973
+  api_version: 1.19
+  name:        se-EMEA-EBC-FAm20-a
+
+se_EMEA_EBC_FA420:
+  ip:          10.225.112.12
+  array_token: cef628f0-831b-30b9-4494-4e8ea56c207c
+  api_version: 1.19
+  name:        se-EMEA-EBC-FA420
