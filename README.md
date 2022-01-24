@@ -47,14 +47,16 @@ Download **ORCA** from GitHub and localise vars/database.yaml to required source
 
 Use from ansible control machine command line or via RedHat Tower / AWX.
 
-### Database Clone Orginal
-`
-$ ansible-playbook database_clone.yaml
-`
 ### Database Clone v2
-Use Purity 6+ to tag database volumes with database name
+Refactored to use Pure Ansible module and Purity 6+ volume tags
 `
 $ ansible-playbook database_clone2.yaml
+`
+### Database Clone Original
+Legacy version available for reference only.
+Examples using Ansible URI module rather than prefered Ansible Pure modules
+`
+$ ansible-playbook database_clone.yaml
 `
 
 ## Restrictions
