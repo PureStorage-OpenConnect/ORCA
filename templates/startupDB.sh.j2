@@ -5,4 +5,5 @@ export PATH=$PATH:$ORACLE_HOME/bin
 
 sqlplus -s "/ as sysdba" << EOF
 startup
+alter pluggable database all open;
 EOF
