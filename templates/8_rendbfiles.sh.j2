@@ -7,4 +7,6 @@ sqlplus / as sysdba <<EOF
 startup mount pfile='{{ tgt_oh }}/dbs/{{ tgt_init }}'
 @rename_files.sql
 alter database open;
+alter pluggable database all open;
+alter pluggable database all save state;
 EOF
