@@ -13,7 +13,7 @@
 *.audit_file_dest='/u01/app/oracle/admin/{{ tgt_db }}/adump'
 *.audit_trail='db'
 *.compatible='19.0.0'
-*.control_files='/u02/oradata/{{ tgt_db | upper}}/control01.ctl','/u03/fast_recovery_area/{{ tgt_db | upper}}/control02.ctl'
+*.control_files='/u02/oradata/{{ tgt_db | upper}}/controlfile/control01.ctl','/u03/fast_recovery_area/{{ tgt_db | upper}}/controlfile/control02.ctl'
 *.db_block_size=8192
 *.db_domain='uklab.purestorage.com'
 *.db_name='{{ tgt_db }}'
