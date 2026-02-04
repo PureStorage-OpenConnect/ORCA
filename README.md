@@ -28,8 +28,7 @@ ORCA is able to leverage the Ansible Tower and AWX Automation and Orchestration 
 1. Job Audit and reporting
 
 ### ORCA Features
-1. Refresh Mulitple Oracle 18c Databases
-1. Shutdown Oracle 18c Databases
+1. Refresh Mulitple Oracle 19c/26ai Databases
 
 ## Getting Started
 
@@ -65,7 +64,7 @@ $ ansible-playbook database_clone.yaml
 
 ## Authors
 
-Ron Ekins, Principal Filed Solutions Architect, Office of the CTO at Pure Storage
+Ron Ekins, Director Field Solution Architecture Pure Storage
 
 Oracle ACE Director
 
