@@ -66,7 +66,7 @@ $ ansible-playbook database_clone.yaml
 
 Ron Ekins, Director Field Solution Architecture Pure Storage
 
-Oracle ACE Director
+Oracle ACE Director (https://ace.oracle.com/ords/ace/profile/ronekins)
 
 ## License
 
